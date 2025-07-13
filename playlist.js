@@ -84,3 +84,22 @@ myMix.playFirst();
 myMix.skipSong();
 // Listing all remaining songs in 'myMix' ("Chillhop Beats", "Evening Jazz").
 myMix.listSongs();
+
+// --- NEW METHOD & IMPROVEMENT SUGGESTION ---
+
+/* IMPROVEMENT SUGGESTION: Instead of always playing the first song after a skip,
+ you could use an index (like this.currentSongIndex) to allow playing songs
+ from anywhere in the list and enabling a 'previousSong' method. 
+ */
+
+/**
+ * Gets the total number of songs currently in the playlist.
+ * @returns {number} The count of songs in the playlist.
+ */
+Playlist.prototype.getTotalSongs = function() {
+  // 'this' refers to the playlist instance.
+  // Returns the length of the 'songs' array, which represents the total number of songs.
+  // This output provides the numerical count of songs in the playlist.
+  return this.songs.length;
+};
+
